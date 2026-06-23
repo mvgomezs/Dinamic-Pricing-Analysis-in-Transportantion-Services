@@ -344,7 +344,7 @@
         <div class="proj-number">2</div>
         <div>
           <h3>Regresión Lineal Múltiple y Diagnóstico de Supuestos · Dynamic Pricing</h3>
-          <p>Métodos Estadísticos en la Ciencia de Datos y Analítica · Junio 2026</p>
+          <p>Métodos Estadísticos · Junio 2026</p>
         </div>
       </div>
 
@@ -355,6 +355,17 @@
           <div class="meta-item"><span>Variable objetivo: </span><strong>Average_Ratings</strong></div>
           <div class="meta-item"><span>Técnicas: </span><strong>OLS · RLM · Bootstrap · Box-Cox · Breusch-Pagan</strong></div>
         </div>
+
+      <!-- Objetivos -->       
+      <div class="info-box amber">
+        <h5>Objetivos del proyecto</h5>
+        <ul>
+        <li>Evaluarsi las variables operacionales del servicio de transporte <code>Number_of_Rides</code>, <code>Expected_Ride_Duration</code>, <code>Customer_loyalty_Status</code> Tienen capacidad para explicar la variación en las calificaciones promedio <code>Average_Ratings</code>.</li>
+        <li>Diagnosticar los supuestos de la regresión lineal múltiple (normalidad, homocedasticidad, independencia) y proponer estrategias de mejora del modelo.</li>
+        <li>Comparar los resultados de OLS con métodos robustos (RLM Huber) y remuestreo (Bootstrap) para confirmar la estabilidad de los hallazgos.</li>
+        </ul>
+      </div>
+        
 
         <!-- Resultados numéricos clave -->
         <div class="results-grid">
@@ -534,31 +545,32 @@
 
   <!-- ─── GUÍA DE EXPORTACIÓN ─────────────────────────────── -->
   <section>
-    <h2 class="section-title">Cómo convertir los notebooks en imágenes para el portafolio</h2>
+    <h2 class="section-title">Modelo Ajustado</h2>
     <div class="export-steps">
 
       <div class="step">
         <div class="step-num">1</div>
         <div>
-          <h5>Agregar <code>plt.savefig()</code></h5>
-          <p>Añade antes de cada <code>plt.show()</code>:<br>
-          <code>plt.savefig('nombre.png', dpi=200, bbox_inches='tight')</code></p>
+          <h5>OLS (Mínimos Cuadrados Ordinarios)</h5>
+          <p><strong>Variable dependiente:</strong> <code>Average_Ratings</code><br> <strong>Predictores:</strong>
+          <code>Number_of_Riders</code>, <code>Expected_Ride_Duration</code>, <code>Customer_Loyalty_Status</code> (dummies; ref = Gold)</p>
         </div>
       </div>
 
       <div class="step">
         <div class="step-num">2</div>
         <div>
-          <h5>Descargar imágenes de Colab</h5>
-          <p>Panel izquierdo → ícono de carpeta → clic derecho sobre cada <code>.png</code> → Descargar.</p>
+          <h5>Diagnóstico de Supuestos</h5>
+          <p><strong>Normalidad de los residuos</strong>: <code>Shapiro-Wilk</code>  <br>
+            <strong>Homocedasticidad</strong>: <code>Breusch-Pagan</code> <br> <strong>Autocorrelación</strong>: <code>Durbin-Watson</code> <br> <strong>Colinealidad</strong>: <code>VIF</code></p>
         </div>
       </div>
 
       <div class="step">
         <div class="step-num">3</div>
         <div>
-          <h5>Incrustar en este portafolio</h5>
-          <p>Reemplaza cada <code>viz-placeholder</code> por:<br>
+          <h5>Intentos de mejora del modelo</h5>
+          <p><strong>Transformación Logarítmica</strong>: <code>R^2</code> por:<br>
           <code>&lt;img src="nombre.png" style="width:100%"&gt;</code></p>
         </div>
       </div>
@@ -604,7 +616,7 @@
 
 <footer>
   Portafolio de <strong>María Virginia Gómez Sandoval</strong> ·
-  Especialización en Ciencia de Datos y Analítica · UNAD · 2026
+  Espealista en Ciencia de Datos y Analítica · 2026
 </footer>
 
 </body>
