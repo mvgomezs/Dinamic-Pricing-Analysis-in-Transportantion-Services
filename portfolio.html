@@ -366,30 +366,53 @@
         </ul>
       </div>
         
+       <!-- ─── GUÍA DE EXPORTACIÓN ─────────────────────────────── -->
+  <section>
+    <h2 class="section-title">Modelo Ajustado</h2>
+    <div class="export-steps">
 
-        <!-- Resultados numéricos clave -->
-        <div class="results-grid">
-          <div class="result-chip">
-            <div class="value">4.2229</div>
-            <div class="label">Intercepto estimado</div>
-          </div>
-          <div class="result-chip">
-            <div class="value">0.49%</div>
-            <div class="label">R² modelo OLS</div>
-          </div>
-          <div class="result-chip">
-            <div class="value">0.0427</div>
-            <div class="label">p-valor Breusch-Pagan</div>
-          </div>
-          <div class="result-chip">
-            <div class="value">1.999</div>
-            <div class="label">Durbin-Watson (sin autocorrelación)</div>
-          </div>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h5>OLS (Mínimos Cuadrados Ordinarios)</h5>
+          <p><strong>Intercepto estimado</strong> <code>4.2229</code><br> <strong>R² modelo OLS</strong><code>0.49%</code> <br><code>Breusch-Pagan p = 0.0427</code> <br><strong>Durbin-Watson (sin autocorrelación)</strong><br> <code>Dw=1.999</code> </p>
         </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h5>Diagnóstico de Supuestos</h5>
+          <p><strong>Normalidad de los residuos</strong>: <code>Shapiro-Wilk</code>  <br>
+            <strong>Homocedasticidad</strong>: <code>Breusch-Pagan</code> <br> <strong>Autocorrelación</strong>: <code>Durbin-Watson</code> <br> <strong>Colinealidad</strong>: <code>Matriz de correlación</code></p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h5>Intento de mejora del modelo (log Y)</h5>
+          <p><strong>Transformación Logarítmica</strong>: <br><code>R² = 0.004</code><br>
+           <code>Breusch-Pagan p = 0.066</code><br><code>Shapiro-Wilk p ≈ 0</code> <br> </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h5>Intento de mejora (λ = 1.225)</h5>
+          <p><strong>Transformación Box-Cox</strong>: <br> <code>R² = 0.0049</code><br>
+          <code> Breusch-Pagan p = 0.039</code><br><code>Shapiro-Wilk p ≈ 0</code> <br> λ ≈ 1.22 indica que la escala original ya es casi la óptima.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
 
         <!-- Visualizaciones mockup -->
         <div class="viz-section">
-          <h4>Visualizaciones principales</h4>
+          <h4>Visualizaciones principales - Diagnostico de supuestos</h4>
           <div class="viz-grid">
 
             <!-- Heatmap correlación -->
@@ -451,53 +474,6 @@
 
           <div class="viz-grid viz-grid--wide">
 
-            <!-- OLS original -->
-            <div class="viz-card">
-              <div class="test-card-header">OLS original · Línea base</div>
-              <div class="test-card-body">
-                <div class="test-chips-grid">
-                  <div class="result-chip result-chip--sm"><div class="value">0.49%</div><div class="label">R²</div></div>
-                  <div class="result-chip result-chip--sm"><div class="value">0.299</div><div class="label">F p-valor</div></div>
-                  <div class="result-chip result-chip--sm"><div class="value">0.043</div><div class="label">Breusch-Pagan p</div></div>
-                  <div class="result-chip result-chip--sm"><div class="value">1.999</div><div class="label">Durbin-Watson</div></div>
-                </div>
-                <div class="conclusion-box" style="background:#fff3e0;border-color:#f4a261;">
-                  Heterocedasticidad marginal detectada (p=0.043 &lt; 0.05) · Residuos no normales
-                </div>
-              </div>
-            </div>
-
-            <!-- Log -->
-            <div class="viz-card">
-              <div class="test-card-header">Transformación log(y)</div>
-              <div class="test-card-body">
-                <div class="test-chips-grid">
-                  <div class="result-chip result-chip--sm"><div class="value">0.47%</div><div class="label">R²</div></div>
-                  <div class="result-chip result-chip--sm"><div class="value">0.066</div><div class="label">Breusch-Pagan p</div></div>
-                  <div class="result-chip result-chip--sm"><div class="value">≈ 0</div><div class="label">Shapiro-Wilk p</div></div>
-                  <div class="result-chip result-chip--sm"><div class="value">0.035</div><div class="label">Silver p-valor</div></div>
-                </div>
-                <div class="conclusion-box" style="background:#e8f5e9;border-color:#2D6A4F;">
-                  Heterocedasticidad resuelta (p=0.066) · Normalidad sigue fallando · R² sin mejora
-                </div>
-              </div>
-            </div>
-
-            <!-- Box-Cox -->
-            <div class="viz-card">
-              <div class="test-card-header">Box-Cox (λ = 1.225)</div>
-              <div class="test-card-body">
-                <div class="test-chips-grid">
-                  <div class="result-chip result-chip--sm"><div class="value">1.225</div><div class="label">Lambda óptimo</div></div>
-                  <div class="result-chip result-chip--sm"><div class="value">0.49%</div><div class="label">R²</div></div>
-                  <div class="result-chip result-chip--sm"><div class="value">0.039</div><div class="label">Breusch-Pagan p</div></div>
-                  <div class="result-chip result-chip--sm"><div class="value">0.032</div><div class="label">Silver p-valor</div></div>
-                </div>
-                <div class="conclusion-box" style="background:#fff3e0;border-color:#f4a261;">
-                  λ≈1.22 indica que la escala original es casi óptima · Heterocedasticidad persiste
-                </div>
-              </div>
-            </div>
 
             <!-- RLM Huber -->
             <div class="viz-card">
@@ -545,64 +521,20 @@
 
   <!-- ─── GUÍA DE EXPORTACIÓN ─────────────────────────────── -->
   <section>
-    <h2 class="section-title">Modelo Ajustado</h2>
-    <div class="export-steps">
+    <h2 class="section-title">Conclusiones del análisis</h2>
+    
 
-      <div class="step">
-        <div class="step-num">1</div>
-        <div>
-          <h5>OLS (Mínimos Cuadrados Ordinarios)</h5>
-          <p><strong>Variable dependiente:</strong> <code>Average_Ratings</code><br> <strong>Predictores:</strong>
-          <code>Number_of_Riders</code>, <code>Expected_Ride_Duration</code>, <code>Customer_Loyalty_Status</code> (dummies; ref = Gold)</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-num">2</div>
-        <div>
-          <h5>Diagnóstico de Supuestos</h5>
-          <p><strong>Normalidad de los residuos</strong>: <code>Shapiro-Wilk</code>  <br>
-            <strong>Homocedasticidad</strong>: <code>Breusch-Pagan</code> <br> <strong>Autocorrelación</strong>: <code>Durbin-Watson</code> <br> <strong>Colinealidad</strong>: <code>VIF</code></p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-num">3</div>
-        <div>
-          <h5>Intentos de mejora del modelo</h5>
-          <p><strong>Transformación Logarítmica</strong>: <code>R^2</code> por:<br>
-          <code>&lt;img src="nombre.png" style="width:100%"&gt;</code></p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-num">4</div>
-        <div>
-          <h5>Alternativa: exportar a PDF</h5>
-          <p>En Jupyter/Colab: <em>Archivo → Descargar → .ipynb</em>, luego usa <code>nbconvert</code>:<br>
-          <code>jupyter nbconvert --to pdf notebook.ipynb</code></p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-num">5</div>
-        <div>
-          <h5>Publicar en GitHub Pages</h5>
-          <p>Sube <code>portfolio.html</code> + carpeta <code>Images/</code> + <code>styles.css</code> a un repo público y activa GitHub Pages para tener URL compartible.</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-num">6</div>
-        <div>
-          <h5>Subir notebooks a GitHub</h5>
-          <p>GitHub renderiza los <code>.ipynb</code> automáticamente con todas las salidas visibles, incluyendo las gráficas.</p>
-        </div>
-      </div>
-
-    </div>
 
     <div class="info-box amber">
+      <h5>Hallazgos clave</h5>
+      <ul>
+        <li>El modelo de regresión no explica Average_Ratings con las variables disponibles: R² ≈ 0 y prueba F no significativa (p = 0.299).</li>
+        <li>El único efecto robusto —confirmado por OLS, RLM y Bootstrap— es que los clientes Silver califican ~0.07 puntos más alto que los Gold, aunque el tamaño del efecto es muy pequeño.</li>
+        <li>La calificación promedio está determinada por factores no capturados en el dataset: experiencia del conductor, puntualidad, trato, estado del vehículo, etc. </li> mejorar el modelo sería necesario incorporar variables directamente relacionadas con la experiencia del usuario durante el viaje.</li>
+      </ul>
+    </div>
+
+        <div class="info-box amber">
       <h5>Consejo para reclutadores: 3 opciones de acceso rápido</h5>
       <ul>
         <li><strong>GitHub:</strong> Repositorio público con los <code>.ipynb</code> renderizados, un README con capturas y enlace al portafolio.</li>
@@ -610,6 +542,7 @@
         <li><strong>Este HTML:</strong> Un solo archivo auto-contenido con imágenes embebidas (base64) que funciona sin servidor ni conexión.</li>
       </ul>
     </div>
+  
   </section>
 
 </div><!-- /container -->
