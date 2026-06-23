@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio – María Virginia Gómez Sandoval</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════ -->
+<div class="hero">
+  <div class="avatar">👩‍💻</div>
+  <div class="hero-text">
+    <h1>María Virginia Gómez Sandoval</h1>
+    <h2>Especialista en Ciencia de Datos y Analítica</h2>
+    <p>Análisis estadístico · Python · Modelos de regresión · Inferencia estadística</p>
+    <div class="badges">
+      <span class="badge">Python</span>
+      <span class="badge">Estadística Inferencial</span>
+      <span class="badge">Regresión Múltiple</span>
+      <span class="badge">Pandas · NumPy</span>
+      <span class="badge">Matplotlib · Seaborn</span>
+      <span class="badge">Statsmodels</span>
+      <span class="badge">SciPy</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTENIDO PRINCIPAL
+══════════════════════════════════════════════════════════ -->
+<div class="container">
+
+  <!-- ─── HABILIDADES ─────────────────────────────────────── -->
+  <section>
+    <h2 class="section-title">Habilidades demostradas en los proyectos</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon skill-icon--blue">📊</div>
+        <div>
+          <h4>Regresión Múltiple</h4>
+          <p>OLS, diagnósticos, supuestos</p>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon skill-icon--yellow">📈</div>
+        <div>
+          <h4>Inferencia Estadística</h4>
+          <p>IC, pruebas t, F, chi²</p>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon skill-icon--green">🔁</div>
+        <div>
+          <h4>Bootstrap & Robustez</h4>
+          <p>Remuestreo, RLM Huber</p>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon skill-icon--purple">🎨</div>
+        <div>
+          <h4>Visualización</h4>
+          <p>Matplotlib, Seaborn</p>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon skill-icon--pink">🧪</div>
+        <div>
+          <h4>Teorema Central del Límite</h4>
+          <p>Simulación, Q-Q, Shapiro-Wilk</p>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon skill-icon--sky">🔍</div>
+        <div>
+          <h4>Diagnóstico de modelos</h4>
+          <p>VIF, Cook, Breusch-Pagan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROYECTO 1 ──────────────────────────────────────── -->
+  <section>
+    <h2 class="section-title">Proyectos</h2>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div class="proj-number">1</div>
+        <div>
+          <h3>Análisis Exploratorio e Inferencial · Dynamic Pricing</h3>
+          <p>Mayo 2026</p>
+        </div>
+      </div>
+
+      <div class="project-body">
+
+        <div class="project-meta">
+          <div class="meta-item"><span>Dataset: </span><strong>dynamic_pricing.csv (n=1000)</strong></div>
+          <div class="meta-item"><span>Herramienta: </span><strong>Python · Jupyter Notebook</strong></div>
+          <div class="meta-item"><span>Técnicas: </span><strong>TCL · IC · Pruebas de hipótesis · Poder estadístico</strong></div>
+        </div>
+
+        <!-- Resultados numéricos clave -->
+        <div class="results-grid">
+          <div class="result-chip">
+            <div class="value">99.59</div>
+            <div class="label">Media Trip Duration (min)</div>
+          </div>
+          <div class="result-chip">
+            <div class="value">0.9987</div>
+            <div class="label">Estadístico W</div>
+          </div>
+          <div class="result-chip">
+            <div class="value">0.678</div>
+            <div class="label">p-valor Shapiro-Wilk</div>
+          </div>
+          <div class="result-chip">
+            <div class="value">✓ H₀</div>
+            <div class="label">Normalidad confirmada</div>
+          </div>
+        </div>
+
+        <!-- Visualizaciones TCL -->
+        <div class="viz-section">
+          <h4>Visualizaciones principales</h4>
+          <div class="viz-grid">
+
+            <!-- Histograma -->
+            <div class="viz-card">
+              <div class="viz-placeholder viz-histogram">
+                <img src="Images/Central Limit Theorem.png" alt="TCL · Distribución de medias muestrales" />
+              </div>
+              <div class="viz-card-footer">📁 <code>Images/Central Limit Theorem.png</code></div>
+            </div>
+
+            <div class="viz-card">
+              <div class="viz-placeholder viz-qqplot">
+                <img src="Images/qq_plot.png" alt="Q-Q Plot · Medias muestrales vs Normal teórica" />
+              </div>
+              <div class="viz-card-footer">📁 <code>Images/2. clt_qq_plot.png</code></div>
+            </div>
+
+            <!-- Boxplot -->
+            <div class="viz-card">
+              <div class="viz-placeholder viz-boxplot">
+                <img src="Images/ride_duration_boxplot.png" alt="Boxplot · Expected Ride Duration por grupo" />
+              </div>
+              <div class="viz-card-footer">📁 <code>Images/ride_duration_boxplot.png</code></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="info-box blue">
+          <h5>Comportamiento de las variables del servicio de transporte mediante técnicas inferenciales (TCL, IC, pruebas de hipótesis)</h5>
+          <ol>
+            <li>Se simularon 1000 muestras de tamaño n=30 de Expected_Ride_Duration para construir la distribución de medias muestrales.</li>
+            <li>Se graficó un histograma y se verificó la normalidad con Q-Q plot y prueba Shapiro-Wilk (p=0.678 &gt; 0.05).</li>
+            <li>Se construyeron tres IC al 95% para la media, proporción de ratings ≥4 y varianza de Expected_Ride_Duration.</li>
+          </ol>
+        </div>
+
+        <!-- Intervalos de Confianza -->
+        <div class="viz-section">
+          <h4>Intervalos de Confianza al 95%</h4>
+          <table class="stats-table">
+            <thead>
+              <tr>
+                <th>Parámetro</th>
+                <th>Estimación puntual</th>
+                <th>Límite inferior</th>
+                <th>Límite superior</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Media · Expected_Ride_Duration</td>
+                <td>99.59 min</td>
+                <td class="td-value">96.54</td>
+                <td class="td-value">102.64</td>
+              </tr>
+              <tr>
+                <td>Proporción · Average_Ratings ≥ 4</td>
+                <td>0.686</td>
+                <td class="td-value">0.657</td>
+                <td class="td-value">0.715</td>
+              </tr>
+              <tr>
+                <td>Varianza · Expected_Ride_Duration</td>
+                <td>2417.24 min²</td>
+                <td class="td-value">2218.51</td>
+                <td class="td-value">2644.06</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Pruebas de Hipótesis -->
+          <h4 class="subsection-title">Pruebas de Hipótesis · Comparación de Grupos</h4>
+          <div class="viz-grid viz-grid--wide">
+
+            <div class="viz-card">
+              <div class="test-card-header">Prueba t de Welch · Duración por Lealtad</div>
+              <div class="test-card-body">
+                <div class="test-chips-grid">
+                  <div class="result-chip result-chip--sm">
+                    <div class="value">313</div>
+                    <div class="label">n Gold · media 101.60 min</div>
+                  </div>
+                  <div class="result-chip result-chip--sm">
+                    <div class="value">367</div>
+                    <div class="label">n Silver · media 97.02 min</div>
+                  </div>
+                  <div class="result-chip result-chip--sm">
+                    <div class="value">1.211</div>
+                    <div class="label">Estadístico t</div>
+                  </div>
+                  <div class="result-chip result-chip--sm">
+                    <div class="value">0.226</div>
+                    <div class="label">p-valor</div>
+                  </div>
+                </div>
+                <div class="conclusion-box">
+                  No se rechaza H₀ — sin diferencia significativa en duración entre Gold y Silver
+                </div>
+              </div>
+            </div>
+
+            <div class="viz-card">
+              <div class="test-card-header">Prueba Z · Ratings por Tipo de Vehículo</div>
+              <div class="test-card-body">
+                <div class="test-chips-grid">
+                  <div class="result-chip result-chip--sm">
+                    <div class="value">69.7%</div>
+                    <div class="label">Economy · 333/478 excelentes</div>
+                  </div>
+                  <div class="result-chip result-chip--sm">
+                    <div class="value">67.6%</div>
+                    <div class="label">Premium · 353/522 excelentes</div>
+                  </div>
+                  <div class="result-chip result-chip--sm">
+                    <div class="value">0.695</div>
+                    <div class="label">Estadístico z</div>
+                  </div>
+                  <div class="result-chip result-chip--sm">
+                    <div class="value">0.487</div>
+                    <div class="label">p-valor</div>
+                  </div>
+                </div>
+                <div class="conclusion-box">
+                  No se rechaza H₀ — ratings estadísticamente equivalentes entre Economy y Premium
+                </div>
+              </div>
+            </div>
+
+            <div class="viz-card">
+              <div class="test-card-header">Prueba F · Igualdad de Varianzas Gold vs Silver</div>
+              <div class="test-card-body">
+                <div class="test-chips-grid">
+                  <div class="result-chip result-chip--sm">
+                    <div class="value">2 516.82</div>
+                    <div class="label">Varianza Gold (min²)</div>
+                  </div>
+                  <div class="result-chip result-chip--sm">
+                    <div class="value">2 319.27</div>
+                    <div class="label">Varianza Silver (min²)</div>
+                  </div>
+                  <div class="result-chip result-chip--sm">
+                    <div class="value">1.0852</div>
+                    <div class="label">Estadístico F (gl₁=312, gl₂=366)</div>
+                  </div>
+                  <div class="result-chip result-chip--sm">
+                    <div class="value">0.4513</div>
+                    <div class="label">p-valor</div>
+                  </div>
+                </div>
+                <div class="conclusion-box">
+                  No se rechaza H₀ — No existe evidencia suficiente para afirmar diferencias entre las varianzas
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Análisis de poder estadístico -->
+          <h4 class="subsection-title">Análisis de Poder Estadístico · Prueba t Gold vs Silver</h4>
+          <table class="stats-table">
+            <thead>
+              <tr>
+                <th>Parámetro</th>
+                <th>Valor</th>
+                <th>Interpretación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tamaño muestral Gold / Media</td>
+                <td class="td-value">313 · 101.60 min</td>
+                <td>Viajes ligeramente más largos en clientes Gold</td>
+              </tr>
+              <tr>
+                <td>Tamaño muestral Silver / Media</td>
+                <td class="td-value">367 · 97.02 min</td>
+                <td>Diferencia observada de ~4.58 min entre grupos</td>
+              </tr>
+              <tr>
+                <td>Cohen d (tamaño del efecto)</td>
+                <td class="td-value">0.0934</td>
+                <td>Efecto muy pequeño (umbral mínimo relevante: d ≥ 0.2). Los grupos son estadísticamente casi idénticos.</td>
+              </tr>
+              <tr>
+                <td>Tamaño efectivo (n_eff)</td>
+                <td class="td-value">168.93</td>
+                <td>Equivale a tener dos grupos balanceados de ~169 personas. El desequilibrio entre 313 y 367 reduce la eficiencia estadística.</td>
+              </tr>
+              <tr>
+                <td>Nivel de significancia (α)</td>
+                <td class="td-value">0.05</td>
+                <td>Probabilidad máxima aceptada de cometer un error tipo I (falso positivo)</td>
+              </tr>
+              <tr>
+                <td>Poder estadístico aproximado</td>
+                <td class="td-value">22.87%</td>
+                <td>La prueba solo tiene un 23% de probabilidad de detectar la diferencia si existiera. El 77% restante sería un falso negativo (error tipo II). Se recomienda poder ≥ 80%.</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="info-box amber">
+            <h5>¿Por qué no se detectó diferencia significativa?</h5>
+            <p>El análisis no rechazó H₀ de forma consistente con los datos: el efecto es tan pequeño (d ≈ 0.09) que se necesitarían muestras mucho mayores para detectarlo con confianza. El bajo poder (23%) indica que la prueba no tenía suficiente sensibilidad para este tamaño de efecto — no necesariamente porque no haya diferencia, sino porque la diferencia, si existe, es prácticamente irrelevante en términos operativos.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── PROYECTO 2 ────────────────────────────────────── -->
+    <div class="project-card">
+      <div class="project-header">
+        <div class="proj-number">2</div>
+        <div>
+          <h3>Regresión Lineal Múltiple y Diagnóstico de Supuestos · Dynamic Pricing</h3>
+          <p>Métodos Estadísticos en la Ciencia de Datos y Analítica · Junio 2026</p>
+        </div>
+      </div>
+
+      <div class="project-body">
+
+        <div class="project-meta">
+          <div class="meta-item"><span>Dataset: </span><strong>dynamic_pricing.csv (n=1000)</strong></div>
+          <div class="meta-item"><span>Variable objetivo: </span><strong>Average_Ratings</strong></div>
+          <div class="meta-item"><span>Técnicas: </span><strong>OLS · RLM · Bootstrap · Box-Cox · Breusch-Pagan</strong></div>
+        </div>
+
+        <!-- Resultados numéricos clave -->
+        <div class="results-grid">
+          <div class="result-chip">
+            <div class="value">4.2229</div>
+            <div class="label">Intercepto estimado</div>
+          </div>
+          <div class="result-chip">
+            <div class="value">0.49%</div>
+            <div class="label">R² modelo OLS</div>
+          </div>
+          <div class="result-chip">
+            <div class="value">0.0427</div>
+            <div class="label">p-valor Breusch-Pagan</div>
+          </div>
+          <div class="result-chip">
+            <div class="value">1.999</div>
+            <div class="label">Durbin-Watson (sin autocorrelación)</div>
+          </div>
+        </div>
+
+        <!-- Visualizaciones mockup -->
+        <div class="viz-section">
+          <h4>Visualizaciones principales</h4>
+          <div class="viz-grid">
+
+            <!-- Heatmap correlación -->
+            <div class="viz-card">
+              <div class="viz-placeholder viz-heatmap">
+                <img src="Images/correlation_matrix.png" alt="Matriz de Correlación" class="viz-label">
+              </div>
+              <div class="viz-card-footer">
+                📁 <code>correlation_matrix.png</code>
+              </div>
+            </div>
+
+            <!-- Residuos vs ajustados -->
+            <div class="viz-card">
+              <div class="viz-placeholder viz-scatter">
+                <img src="Images/residual_fitted.png" alt="Residuos vs Valores Ajustados" class="viz-label">
+              </div>
+              <div class="viz-card-footer">
+                📁 <code>residual_fitted.png</code>
+              </div>
+            </div>
+
+            <!-- Cook's distance -->
+            <div class="viz-card">
+              <div class="viz-placeholder viz-cook">
+                <img src="Images/cooks_distance.png" alt="Distancia de Cook · Observaciones influyentes" class="viz-label">
+              </div>
+              <div class="viz-card-footer">
+                📁 <code>cooks_distance.png</code>
+              </div>
+            </div>
+
+            <!-- Histograma de residuos -->
+            <div class="viz-card">
+              <div class="viz-placeholder viz-histogram">
+                <img src="Images/residual_histogram.png" alt="Histograma de Residuos" class="viz-label">
+              </div>
+              <div class="viz-card-footer">
+                📁 <code>residual_histogram.png</code>
+              </div>
+            </div>
+
+            <!-- Q-Q plot de residuos -->
+            <div class="viz-card">
+              <div class="viz-placeholder viz-qqplot">
+                <img src="Images/residual_qq_plot.png" alt="Q-Q Plot de Residuos" class="viz-label">
+              </div>
+              <div class="viz-card-footer">
+                📁 <code>residual_qq_plot.png</code>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Pipeline de modelos -->
+        <div class="viz-section">
+          <h4>Pipeline de mejora del modelo · Diagnóstico y robustez</h4>
+
+          <div class="viz-grid viz-grid--wide">
+
+            <!-- OLS original -->
+            <div class="viz-card">
+              <div class="test-card-header">OLS original · Línea base</div>
+              <div class="test-card-body">
+                <div class="test-chips-grid">
+                  <div class="result-chip result-chip--sm"><div class="value">0.49%</div><div class="label">R²</div></div>
+                  <div class="result-chip result-chip--sm"><div class="value">0.299</div><div class="label">F p-valor</div></div>
+                  <div class="result-chip result-chip--sm"><div class="value">0.043</div><div class="label">Breusch-Pagan p</div></div>
+                  <div class="result-chip result-chip--sm"><div class="value">1.999</div><div class="label">Durbin-Watson</div></div>
+                </div>
+                <div class="conclusion-box" style="background:#fff3e0;border-color:#f4a261;">
+                  Heterocedasticidad marginal detectada (p=0.043 &lt; 0.05) · Residuos no normales
+                </div>
+              </div>
+            </div>
+
+            <!-- Log -->
+            <div class="viz-card">
+              <div class="test-card-header">Transformación log(y)</div>
+              <div class="test-card-body">
+                <div class="test-chips-grid">
+                  <div class="result-chip result-chip--sm"><div class="value">0.47%</div><div class="label">R²</div></div>
+                  <div class="result-chip result-chip--sm"><div class="value">0.066</div><div class="label">Breusch-Pagan p</div></div>
+                  <div class="result-chip result-chip--sm"><div class="value">≈ 0</div><div class="label">Shapiro-Wilk p</div></div>
+                  <div class="result-chip result-chip--sm"><div class="value">0.035</div><div class="label">Silver p-valor</div></div>
+                </div>
+                <div class="conclusion-box" style="background:#e8f5e9;border-color:#2D6A4F;">
+                  Heterocedasticidad resuelta (p=0.066) · Normalidad sigue fallando · R² sin mejora
+                </div>
+              </div>
+            </div>
+
+            <!-- Box-Cox -->
+            <div class="viz-card">
+              <div class="test-card-header">Box-Cox (λ = 1.225)</div>
+              <div class="test-card-body">
+                <div class="test-chips-grid">
+                  <div class="result-chip result-chip--sm"><div class="value">1.225</div><div class="label">Lambda óptimo</div></div>
+                  <div class="result-chip result-chip--sm"><div class="value">0.49%</div><div class="label">R²</div></div>
+                  <div class="result-chip result-chip--sm"><div class="value">0.039</div><div class="label">Breusch-Pagan p</div></div>
+                  <div class="result-chip result-chip--sm"><div class="value">0.032</div><div class="label">Silver p-valor</div></div>
+                </div>
+                <div class="conclusion-box" style="background:#fff3e0;border-color:#f4a261;">
+                  λ≈1.22 indica que la escala original es casi óptima · Heterocedasticidad persiste
+                </div>
+              </div>
+            </div>
+
+            <!-- RLM Huber -->
+            <div class="viz-card">
+              <div class="test-card-header">Regresión Robusta · RLM Huber T</div>
+              <div class="test-card-body">
+                <div class="test-chips-grid">
+                  <div class="result-chip result-chip--sm"><div class="value">4.2229</div><div class="label">Intercepto RLM</div></div>
+                  <div class="result-chip result-chip--sm"><div class="value">0.0721</div><div class="label">β Silver (vs 0.0714 OLS)</div></div>
+                  <div class="result-chip result-chip--sm"><div class="value">0.035</div><div class="label">Silver p-valor</div></div>
+                  <div class="result-chip result-chip--sm"><div class="value">8 iter.</div><div class="label">IRLS · MAD scale</div></div>
+                </div>
+                <div class="conclusion-box" style="background:#e8f5e9;border-color:#2D6A4F;">
+                  Coeficientes idénticos al OLS (4.° decimal) · Resultados no están distorsionados por outliers
+                </div>
+              </div>
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="viz-card">
+              <div class="test-card-header">Bootstrap · B = 1000 remuestras</div>
+              <div class="test-card-body">
+                <table class="stats-table" style="font-size:0.8rem;margin:0;">
+                  <thead>
+                    <tr><th>Variable</th><th>IC 2.5%</th><th>IC 97.5%</th><th>Excluye 0</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Number_of_Riders</td><td class="td-value">−0.0011</td><td class="td-value">0.0013</td><td style="color:#888;">No</td></tr>
+                    <tr><td>Expected_Ride_Duration</td><td class="td-value">−0.0007</td><td class="td-value">0.0004</td><td style="color:#888;">No</td></tr>
+                    <tr><td>Loyalty Regular</td><td class="td-value">−0.0317</td><td class="td-value">0.1040</td><td style="color:#888;">No</td></tr>
+                    <tr style="background:#f0faf4;"><td><strong>Loyalty Silver</strong></td><td class="td-value"><strong>0.0040</strong></td><td class="td-value"><strong>0.1367</strong></td><td style="color:#2D6A4F;font-weight:600;">Sí ✓</td></tr>
+                  </tbody>
+                </table>
+                <div class="conclusion-box" style="margin-top:0.5rem;background:#e8f5e9;border-color:#2D6A4F;">
+                  Sin asumir normalidad, solo Silver excluye el cero · Resultado robusto confirmado
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── GUÍA DE EXPORTACIÓN ─────────────────────────────── -->
+  <section>
+    <h2 class="section-title">Cómo convertir los notebooks en imágenes para el portafolio</h2>
+    <div class="export-steps">
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h5>Agregar <code>plt.savefig()</code></h5>
+          <p>Añade antes de cada <code>plt.show()</code>:<br>
+          <code>plt.savefig('nombre.png', dpi=200, bbox_inches='tight')</code></p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h5>Descargar imágenes de Colab</h5>
+          <p>Panel izquierdo → ícono de carpeta → clic derecho sobre cada <code>.png</code> → Descargar.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h5>Incrustar en este portafolio</h5>
+          <p>Reemplaza cada <code>viz-placeholder</code> por:<br>
+          <code>&lt;img src="nombre.png" style="width:100%"&gt;</code></p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h5>Alternativa: exportar a PDF</h5>
+          <p>En Jupyter/Colab: <em>Archivo → Descargar → .ipynb</em>, luego usa <code>nbconvert</code>:<br>
+          <code>jupyter nbconvert --to pdf notebook.ipynb</code></p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">5</div>
+        <div>
+          <h5>Publicar en GitHub Pages</h5>
+          <p>Sube <code>portfolio.html</code> + carpeta <code>Images/</code> + <code>styles.css</code> a un repo público y activa GitHub Pages para tener URL compartible.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">6</div>
+        <div>
+          <h5>Subir notebooks a GitHub</h5>
+          <p>GitHub renderiza los <code>.ipynb</code> automáticamente con todas las salidas visibles, incluyendo las gráficas.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="info-box amber">
+      <h5>Consejo para reclutadores: 3 opciones de acceso rápido</h5>
+      <ul>
+        <li><strong>GitHub:</strong> Repositorio público con los <code>.ipynb</code> renderizados, un README con capturas y enlace al portafolio.</li>
+        <li><strong>Google Colab:</strong> Comparte los notebooks con "Cualquier persona con el enlace puede ver" → el reclutador no necesita instalar nada.</li>
+        <li><strong>Este HTML:</strong> Un solo archivo auto-contenido con imágenes embebidas (base64) que funciona sin servidor ni conexión.</li>
+      </ul>
+    </div>
+  </section>
+
+</div><!-- /container -->
+
+<footer>
+  Portafolio de <strong>María Virginia Gómez Sandoval</strong> ·
+  Especialización en Ciencia de Datos y Analítica · UNAD · 2026
+</footer>
+
+</body>
+</html>

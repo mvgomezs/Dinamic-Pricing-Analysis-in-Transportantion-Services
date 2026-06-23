@@ -1,0 +1,465 @@
+/* ── Reset & variables ──────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --navy:   #1E3A5F;
+    --teal:   #2E86AB;
+    --orange: #F4A261;
+    --green:  #2D6A4F;
+    --light:  #F0F4F8;
+    --white:  #FFFFFF;
+    --gray:   #6B7280;
+    --border: #D1D5DB;
+    --radius: 12px;
+    --shadow: 0 4px 20px rgba(30,58,95,0.10);
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--light);
+  color: #1F2937;
+  line-height: 1.6;
+}
+
+/* ── Header / Hero ──────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+      color: var(--white);
+      padding: 64px 32px 48px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+.avatar {
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--orange);
+  background: rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.hero-text h1 { font-size: 2rem; font-weight: 700; }
+.hero-text h2 {
+  font-size: 1.1rem; font-weight: 400;
+  opacity: 0.85; margin-top: 4px;
+}
+.hero-text p  { margin-top: 8px; opacity: 0.75; font-size: 0.95rem; }
+
+.badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.badge {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── Layout ─────────────────────────────────────────────── */
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+
+section + section { margin-top: 52px; }
+
+.section-title {
+  font-size: 1.35rem; font-weight: 700; color: var(--navy);
+  border-left: 4px solid var(--teal);
+  padding-left: 14px; margin-bottom: 24px;
+}
+
+/* ── Skills ─────────────────────────────────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.skill-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 12px;
+}
+
+.skill-icon {
+  width: 36px; height: 36px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; flex-shrink: 0;
+}
+
+.skill-card h4 { font-size: 0.88rem; font-weight: 600; }
+.skill-card p  { font-size: 0.78rem; color: var(--gray); }
+
+/* ── Project cards ──────────────────────────────────────── */
+.project-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+
+.project-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 20px 28px;
+  display: flex; align-items: flex-start; gap: 16px;
+}
+
+.proj-number {
+  background: var(--orange);
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.project-header h3 { font-size: 1.1rem; margin-bottom: 4px; }
+.project-header p  { font-size: 0.85rem; opacity: 0.8; }
+
+.project-body { padding: 24px 28px; }
+
+.project-meta {
+  display: flex; gap: 24px; flex-wrap: wrap;
+  margin-bottom: 20px; padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.meta-item { font-size: 0.85rem; }
+.meta-item span { color: var(--gray); }
+.meta-item strong { color: var(--navy); }
+
+/* ── Visualization grid ─────────────────────────────────── */
+.viz-section h4 {
+  font-size: 0.95rem; font-weight: 600;
+  color: var(--navy); margin-bottom: 14px;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.viz-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.viz-card:hover { box-shadow: 0 6px 24px rgba(46,134,171,0.18); }
+
+.viz-placeholder {
+  width: 100%; aspect-ratio: 16/10;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px; font-size: 0.8rem; color: var(--gray);
+  position: relative; overflow: hidden;
+}
+
+.viz-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Estilos de cada placeholder imitando gráficas reales */
+.viz-histogram { background: linear-gradient(160deg,#EBF5FB,#D6EAF8); }
+.viz-qqplot    { background: linear-gradient(160deg,#FEF9E7,#FDEBD0); }
+.viz-heatmap   { background: linear-gradient(160deg,#EAFAF1,#D5F5E3); }
+.viz-scatter   { background: linear-gradient(160deg,#FDF2F8,#F9EBEA); }
+.viz-ic        { background: linear-gradient(160deg,#EAF2FF,#D6E4F0); }
+.viz-cook      { background: linear-gradient(160deg,#F4ECF7,#E8DAEF); }
+
+/* Simulación de barras en histogramas */
+.fake-chart {
+  width: 90%; height: 70%;
+  display: flex; align-items: flex-end; gap: 3px;
+  padding: 0 4px;
+}
+
+.bar {
+  flex: 1; border-radius: 3px 3px 0 0;
+  background: var(--teal); opacity: 0.7;
+}
+
+/* Línea diagonal para Q-Q */
+.fake-qq {
+  width: 80%; height: 70%;
+  border-left: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  position: relative;
+}
+.fake-qq::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(
+    to top right,
+    transparent calc(50% - 1px),
+    var(--orange) calc(50% - 1px),
+    var(--orange) calc(50% + 1px),
+    transparent calc(50% + 1px)
+  );
+}
+
+/* Cuadrícula para heatmap */
+.fake-heatmap {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 3px; width: 80%; height: 70%;
+}
+.heat-cell { border-radius: 3px; }
+
+/* Puntos para scatter */
+.fake-scatter {
+  width: 80%; height: 70%;
+  border-left: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  position: relative;
+}
+.dot {
+  position: absolute;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--navy);
+  opacity: 0.6;
+}
+
+/* Curvas para IC */
+.fake-ic {
+  width: 90%; height: 70%;
+  position: relative;
+}
+
+.viz-label {
+  font-size: 0.78rem; font-weight: 600;
+  color: var(--navy); text-align: center;
+  padding: 0 8px;
+}
+
+.viz-card-footer {
+  background: var(--light);
+  padding: 10px 14px;
+  font-size: 0.78rem; color: var(--gray);
+  border-top: 1px solid var(--border);
+}
+
+/* ── Instruction box ────────────────────────────────────── */
+.info-box {
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-size: 0.88rem;
+}
+.info-box.blue  { background: #EBF5FB; border-left: 4px solid var(--teal);  }
+.info-box.amber { background: #FEF9E7; border-left: 4px solid var(--orange);}
+.info-box.green { background: #EAFAF1; border-left: 4px solid var(--green); }
+
+.info-box h5 { font-weight: 700; margin-bottom: 8px; }
+
+.info-box ol, .info-box ul { padding-left: 20px; }
+.info-box li { margin-bottom: 4px; }
+.info-box code {
+  background: rgba(0,0,0,0.07);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: monospace;
+  font-size: 0.85em;
+}
+
+/* ── Key results ────────────────────────────────────────── */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px,1fr));
+  gap: 12px; margin-top: 16px;
+}
+
+.result-chip {
+  background: var(--light);
+  border-radius: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+.result-chip .value { font-size: 1.3rem; font-weight: 800; color: var(--navy); }
+.result-chip .label { font-size: 0.75rem; color: var(--gray); margin-top: 2px; }
+
+/* ── Skill icon colors ──────────────────────────────────── */
+.skill-icon--blue   { background: #EBF5FB; }
+.skill-icon--yellow { background: #FEF9E7; }
+.skill-icon--green  { background: #EAFAF1; }
+.skill-icon--purple { background: #F4ECF7; }
+.skill-icon--pink   { background: #FDF2F8; }
+.skill-icon--sky    { background: #EAF2FF; }
+
+/* ── Viz label emphasis ─────────────────────────────────── */
+.viz-label em { font-weight: 400; font-size: 0.72rem; }
+
+/* ── Viz section spacing ────────────────────────────────── */
+.viz-section { margin-top: 24px; }
+
+/* ── Stats table ─────────────────────────────────────────── */
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+}
+.stats-table thead tr { background: var(--navy); color: var(--white); }
+.stats-table th {
+  padding: 10px 14px;
+  text-align: center;
+}
+.stats-table th:first-child { text-align: left; border-radius: 8px 0 0 0; }
+.stats-table th:last-child  { border-radius: 0 8px 0 0; }
+.stats-table tbody tr:nth-child(odd)  { background: var(--white); }
+.stats-table tbody tr:nth-child(even) { background: var(--light); }
+.stats-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+.stats-table td:first-child     { font-weight: 600; color: var(--navy); }
+.stats-table td:not(:first-child) { text-align: center; }
+.stats-table tbody tr:last-child td { border-bottom: none; }
+.td-value { color: var(--teal); font-weight: 600; }
+
+/* ── Subsection heading ─────────────────────────────────── */
+.subsection-title {
+  font-size: 0.95rem; font-weight: 600;
+  color: var(--navy); margin-bottom: 14px; margin-top: 4px;
+}
+
+/* ── Viz grid wide variant ──────────────────────────────── */
+.viz-grid--wide { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+
+/* ── Viz card full-width ────────────────────────────────── */
+.viz-card--full { margin-top: 16px; }
+
+/* ── Test cards ─────────────────────────────────────────── */
+.test-card-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.test-card-body { padding: 16px 18px; }
+.test-chips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+/* ── Result chip small variant ──────────────────────────── */
+.result-chip--sm .value { font-size: 1rem; }
+
+/* ── Conclusion box ─────────────────────────────────────── */
+.conclusion-box {
+  background: #EAFAF1;
+  border-left: 3px solid var(--green);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  color: var(--navy);
+}
+.conclusion-box--center { text-align: center; width: calc(100% - 16px); }
+
+/* ── Shapiro-Wilk card internals ────────────────────────── */
+.shapiro-card {
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+.shapiro-title    { font-size: 0.88rem; font-weight: 700; color: var(--navy); }
+.shapiro-subtitle { font-size: 0.75rem; color: var(--gray); text-align: center; }
+.shapiro-chips    { display: flex; gap: 10px; width: 100%; padding: 0 8px; }
+.shapiro-chips .result-chip { flex: 1; }
+
+/* ── Boxplot placeholder ─────────────────────────────────── */
+.viz-boxplot {
+  background: linear-gradient(160deg, #EBF5FB, #D6EAF8);
+}
+.viz-boxplot img { object-fit: contain; }
+
+/* ── Export guide ───────────────────────────────────────── */
+.export-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+  gap: 14px;
+}
+
+.step {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+  display: flex; gap: 14px; align-items: flex-start;
+}
+
+.step-num {
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 50%;
+  width: 30px; height: 30px;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+}
+
+.step h5 { font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; }
+.step p  { font-size: 0.80rem; color: var(--gray); }
+
+/* ── Footer ─────────────────────────────────────────────── */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  padding: 28px;
+  font-size: 0.85rem;
+  margin-top: 60px;
+}
+footer strong { color: var(--white); }
+
+/* ── Fake heatmap cell colors ──────────────────────────────── */
+.fake-heatmap .heat-cell:nth-child(1),
+.fake-heatmap .heat-cell:nth-child(6),
+.fake-heatmap .heat-cell:nth-child(11),
+.fake-heatmap .heat-cell:nth-child(16) { background: #1A5276; }
+.fake-heatmap .heat-cell:nth-child(2),
+.fake-heatmap .heat-cell:nth-child(5),
+.fake-heatmap .heat-cell:nth-child(12),
+.fake-heatmap .heat-cell:nth-child(15) { background: #2E86AB; }
+.fake-heatmap .heat-cell:nth-child(3),
+.fake-heatmap .heat-cell:nth-child(8),
+.fake-heatmap .heat-cell:nth-child(9),
+.fake-heatmap .heat-cell:nth-child(14) { background: #85C1E9; }
+.fake-heatmap .heat-cell:nth-child(4),
+.fake-heatmap .heat-cell:nth-child(7),
+.fake-heatmap .heat-cell:nth-child(10),
+.fake-heatmap .heat-cell:nth-child(13) { background: #D6EAF8; }
+
+/* ── Fake scatter dot positions ────────────────────────────── */
+.fake-scatter .dot:nth-child(1)  { left: 10%; top: 30%; }
+.fake-scatter .dot:nth-child(2)  { left: 20%; top: 55%; }
+.fake-scatter .dot:nth-child(3)  { left: 30%; top: 40%; }
+.fake-scatter .dot:nth-child(4)  { left: 40%; top: 20%; }
+.fake-scatter .dot:nth-child(5)  { left: 50%; top: 65%; }
+.fake-scatter .dot:nth-child(6)  { left: 60%; top: 45%; }
+.fake-scatter .dot:nth-child(7)  { left: 70%; top: 30%; }
+.fake-scatter .dot:nth-child(8)  { left: 80%; top: 55%; }
+.fake-scatter .dot:nth-child(9)  { left: 90%; top: 42%; }
+.fake-scatter .dot:nth-child(10) { left: 15%; top: 70%; }
+.fake-scatter .dot:nth-child(11) { left: 55%; top: 22%; }
+.fake-scatter .dot:nth-child(12) { left: 75%; top: 68%; }
